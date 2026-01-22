@@ -1,0 +1,82 @@
+/* Footer bg */
+footer {
+  background-color: #131414 !important;
+  color: #fff !important;
+}
+
+/* Top center block */
+.footer-brand-block {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-brand-desc {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Section titles */
+.footer-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #eee6e7;
+  display: block;
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+/* text */
+footer li,
+footer p,
+footer a {
+  color: #ddd;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+footer a:hover,
+footer li:hover {
+  color: #fff !important;
+}
+
+/* bottom bar */
+.footer-bottom {
+  background-color: #0a0a0a;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+/* Social icons */
+.footer-social {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 32px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+

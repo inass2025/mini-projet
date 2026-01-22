@@ -1,0 +1,232 @@
+:root{
+  --bg: #fafafa;
+  --card-bg: rgba(15, 20, 25, 0.98);
+  --accent: #8B0000;
+  --muted: #080808;
+  --radius: 16px;
+}
+
+*{box-sizing:border-box}
+body{
+   background-color: #0f1419;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+}
+
+.page{
+  max-width:1200px;
+  margin:20px auto;
+  padding:16px;
+}
+
+/* HEADER */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.brand{
+  font-weight:700;
+  color:var(--accent);
+  font-size:22px;
+}
+
+.cta{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
+}
+
+/* GRID */
+.cards-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARD */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .28s, box-shadow .28s;
+  transform-origin: center;
+  padding-bottom:16px;
+}
+
+/* HOVER ANIMATION */
+.card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* PRICE BADGE */
+.price-badge{
+  position:absolute;
+  right:14px;
+  top:14px;
+  background:white;
+  padding:10px;
+  border-radius:12px;
+  text-align:center;
+  border: 1px solid rgba(255,59,59,0.12);
+  z-index:3;
+  min-width:150px;
+}
+
+.price-upper{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.price-main{
+  font-weight:700;
+  color:var(--accent);
+  margin:6px 0;
+}
+
+.rent-btn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  cursor:pointer;
+}
+
+/* IMAGE */
+.img-wrap{
+  height:170px;
+  overflow:hidden;
+  border-radius:12px;
+  margin:18px;
+  background:#f6f6f6;
+}
+
+.img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:10px;
+  transition: transform .45s;
+}
+
+.card:hover .img-wrap img{
+  transform:scale(1.06);
+}
+
+/* BODY */
+.card-body{
+  padding:0 18px 16px;
+}
+
+h3{
+  margin:6px 0 8px;
+  font-size:18px;
+  font-weight:600;
+}
+
+.pill{
+  font-size:13px;
+  color:var(--muted);
+  border:1px dashed #ddd;
+  padding:6px 8px;
+  border-radius:999px;
+}
+
+/* FEATURES */
+.features{
+  list-style:none;
+  padding:0;
+  margin:12px 0 0;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.features li{
+  font-size:13px;
+  color:var(--muted);
+  background:#dfd5d5;
+  padding:8px 10px;
+  border-radius:10px;
+}
+
+/* FILTER BUTTONS */
+.filter-bar{
+  display:flex;
+  gap:12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-bar button{
+  padding:8px 14px;
+  border-radius:20px;
+  border:1px solid #ddd;
+  background:white;
+  cursor:pointer;
+  font-size:14px;
+  transition:.2s;
+}
+
+.filter-bar button:hover{
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* active filter */
+.filter-bar .active{
+  background: var(--accent);
+  color:white;
+  border-color: var(--accent);
+}
+.price-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  
+  /* hide by default */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all .3s ease;
+  pointer-events: none; /* avoid click before hover */;
+  z-index:5;
+}
+.card:hover .price-badge {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card {
+  position: relative;
+}
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* hide ugly scrollbar */
+  scrollbar-width: none;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display:none;
+}

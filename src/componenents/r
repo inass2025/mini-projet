@@ -1,0 +1,3 @@
+ <button onClick={() => nav("/services")} className="btn1">
+  Book Now
+</button>

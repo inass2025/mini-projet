@@ -1,0 +1,78 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import tik from './tik.jpg'
+import  imageinsta from './imageinsta.jpg'  // khass path ykoun relatif mn lfile dyalek
+import  face2 from './face2.jpg'
+
+export default function Footer() {
+  return (
+    <footer className="bg-dark text-white pt-5">
+      <div className="container">
+        <div className="row">
+
+          {/* ABOUT US */}
+          <div className="col-md-3 mb-4">
+            <h5>ABOUT US</h5>
+            <p>Divi Theme Consultant and Freelancer for your small business websites.</p>
+          </div>
+
+          {/* OUR LOCATIONS */}
+          <div className="col-md-3 mb-4">
+            <h5>OUR LOCATIONS</h5>
+            <ul className="list-unstyled">
+              <li>Foster City</li>
+              <li>Mumbai</li>
+              <li>Pune</li>
+            </ul>
+          </div>
+
+          {/* OUR SERVICES */}
+          <div className="col-md-3 mb-4">
+            <h5>OUR SERVICES</h5>
+            <ul className="list-unstyled">
+              <li>Theme Customization</li>
+              <li>Divi Edits</li>
+              <li>Onpage SEO</li>
+            </ul>
+          </div>
+          <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h6 className="text-uppercase mb-3 ">Follow Us</h6>
+            <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src={imageinsta} alt="Instagram" width="32" />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src={face2} alt="Facebook" width="32" />
+              </a>
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                <img src={tik} alt="TikTok" width="32" />
+              </a>
+            </div>
+           
+          </div>
+
+
+          {/* CONTACT US */}
+          <div className="col-md-3 mb-4">
+            <h5>CONTACT US</h5>
+            <address>
+              WPPortfolio<br />
+              123 Foster Blvd<br />
+              Foster City, CA 94404<br />
+              <a href="tel:6501231234" className="text-white">650-123-1234</a><br />
+              <a href="mailto:girish@wpportfolio.com" className="text-white">girish@wpportfolio.com</a>
+            </address>
+          </div>
+
+        </div>
+
+        <hr className="bg-white" />
+
+        {/* Bottom Bar */}
+        <div className="text-center pb-3">
+          My own footer | Designed by Elegant Themes | Powered by WordPress | G+
+        </div>
+      </div>
+    </footer>
+  );
+}
